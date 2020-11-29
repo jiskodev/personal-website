@@ -7,9 +7,7 @@ export const Container = styled.div`
     
     overflow: hidden;
     @media (max-width: 768px) {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        
         width: 100%;
         margin-left: 0;
         padding-top: 100px;
@@ -23,6 +21,11 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
 `
 
 export const Box = styled.div`
