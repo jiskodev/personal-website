@@ -4,9 +4,7 @@ export const Container = styled.div`
     width: 94%;
     height: 100vh;
     margin-left: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    
     overflow: hidden;
     @media (max-width: 768px) {
         flex-direction: column;
@@ -19,13 +17,20 @@ export const Container = styled.div`
 `
 
 export const Wrapper = styled.div`
-    width: 30%;
-    min-width: 300px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+`
+
+export const Box = styled.div`
+    
 `
 
 export const ImageWrapper = styled.div`
-    width: 30%;
-    min-width: 300px;
+    min-width: 250px;
     display: flex;
     justify-content: center;
 `
@@ -33,9 +38,9 @@ export const ImageWrapper = styled.div`
 export const Hello = styled.h2`
     text-align: left;
     color: #FFFFFF;
-    font-size: 80px;
+    font-size: 70px;
     @media (max-width: 768px) {
-        font-size: 42px;
+        font-size: 40px;
         align-self: flex-start;
     }
 `

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Hello, Image, Text, Wrapper, ImageWrapper } from './heroElements'
+import { Container, Hello, Image, Text, Wrapper, ImageWrapper, Box } from './heroElements'
 import Memoji from '../../assets/memoji.png'
 
 function Hero() {
@@ -7,14 +7,16 @@ function Hero() {
         <>
             <Container>
                 <Wrapper>
-                    <Hello>
-                        Hello,<br /> I'm Sergio
-                    </Hello>
-                    <Text>A self-taught Front End Developer</Text>
+                    <Box>
+                        <Hello>
+                            Hello,<br /> I'm Sergio
+                        </Hello>
+                        <Text>A self-taught Front End Developer</Text>
+                    </Box>
+                    <ImageWrapper>
+                        <Image src={Memoji}></Image>
+                    </ImageWrapper>
                 </Wrapper>
-                <ImageWrapper>
-                    <Image src={Memoji}></Image>
-                </ImageWrapper>
             </Container>
         </>
     )

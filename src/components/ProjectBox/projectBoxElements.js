@@ -14,10 +14,10 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: left;
     @media (max-width: 768px) {
@@ -31,6 +31,7 @@ export const LeftBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    max-width: 380px;
 `
 
 export const NumberBox = styled.div`
@@ -75,7 +76,10 @@ export const ProjectLinkBox = styled.div`
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
-    
+    transition: 0.2s;
+    :hover {
+        background-color: #fff;
+    }
 `
 
 export const ProjectLink = styled(Link)`
@@ -95,7 +99,7 @@ export const RightBox = styled.div`
 
 `
 export const ProjectImageWrapper = styled.div`
-    width: 500px;
+    width: 600px;
     height: 380px;
     overflow: hidden;
     @media (max-width: 768px) {

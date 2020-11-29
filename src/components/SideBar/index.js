@@ -19,7 +19,7 @@ function SideBar({ toggle, open }) {
                         <SideBarListItem>Contact</SideBarListItem>
                         <SideBarListItem>Projects</SideBarListItem>
                         <SideBarListItem>About</SideBarListItem>
-                        <SideBarListItem>Home</SideBarListItem>
+                        <SideBarListItem to='/'>Home</SideBarListItem>
                     </SideBarList>
                 </SideBarBox>
                 <SideBarBox>

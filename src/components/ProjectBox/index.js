@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container, Icon, LeftBox, Number, NumberBox, NumberLine, ProjectDescription, ProjectImage, ProjectImageWrapper, ProjectLink, ProjectLinkBox, ProjectTitle, RightBox, Wrapper } from './projectBoxElements'
-import Image from '../../assets/github-battle.png'
 
 
-function ProjectBox() {
+function ProjectBox({ number, title, description, imagePath, to }) {
+    console.log(imagePath)
     return (
         <div>
             <Container>
@@ -11,19 +11,19 @@ function ProjectBox() {
                     <LeftBox>
                         <NumberBox>
                             <NumberLine></NumberLine>
-                            <Number>01</Number>
+                            <Number>{number}</Number>
                         </NumberBox>
-                        <ProjectTitle>GitHub Battle</ProjectTitle>
-                        <ProjectDescription>Application made in React using the GitHub API</ProjectDescription>
+                        <ProjectTitle>{title}</ProjectTitle>
+                        <ProjectDescription>{description}</ProjectDescription>
                         <ProjectLinkBox>
-                            <ProjectLink>
+                            <ProjectLink to={`/${to}`}>
                             View project <Icon size={30}></Icon>
                             </ProjectLink>
                         </ProjectLinkBox>
                     </LeftBox>
                     <RightBox>
                         <ProjectImageWrapper>
-                            <ProjectImage src={Image}></ProjectImage>
+                            <ProjectImage src={imagePath}></ProjectImage>
                         </ProjectImageWrapper>
                     </RightBox>
                 </Wrapper>

@@ -14,7 +14,7 @@ export const Container = styled.div`
 `
 
 export const Wrapper = styled.div`
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     @media (max-width: 768px) {
         width: 95%;
