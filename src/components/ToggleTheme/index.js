@@ -1,5 +1,5 @@
 import React from 'react'
-import { RiMoonFill, RiSunFill } from 'react-icons/ri'
+import { RiMoonFill } from 'react-icons/ri'
 import { FiSun } from 'react-icons/fi'
 import { ThemeButton } from './toggleThemeElements'
 

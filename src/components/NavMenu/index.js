@@ -1,7 +1,6 @@
 import { useAnimation } from 'framer-motion'
 import React, {useEffect} from 'react'
-import { Container, ItemsWrapper, MenuContainer, MenuLink, SocialLink, SocialLinksBox, GitHub, LinkedIn, Mail, ToggleThemeBox, ThemeButton } from './navMenuElements'
-import { RiSunFill, RiMoonFill } from 'react-icons/ri'
+import { Container, ItemsWrapper, MenuContainer, MenuLink, SocialLink, SocialLinksBox, GitHub, LinkedIn, Mail, ToggleThemeBox } from './navMenuElements'
 import ToggleThemeButton from '../ToggleTheme'
 
 
