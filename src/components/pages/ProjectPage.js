@@ -1,7 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import SideBar from '../SideBar'
-import NavMenu from '../NavMenu'
 import ProjectView from '../ProjectView'
 
 function ProjectPage({ projects, toggle, open }) {
@@ -10,8 +8,6 @@ function ProjectPage({ projects, toggle, open }) {
 
     return (
         <>
-            <SideBar toggle={toggle} open={open} />
-            <NavMenu open={open}></NavMenu>
             <ProjectView {...currentProject}></ProjectView>
         </>
     )

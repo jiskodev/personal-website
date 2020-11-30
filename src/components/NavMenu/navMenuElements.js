@@ -15,7 +15,7 @@ export const Container = styled(motion.div)`
     align-items: center;
     z-index: 8;
     position: fixed;
-    background-color: black;
+    background-color: ${props => props.theme.colors.backgroundColor};
 `
 
 export const ItemsWrapper = styled.div`
@@ -73,8 +73,17 @@ export const Mail = styled(MdEmail)`
 `
 
 export const ToggleThemeBox = styled.div`
+    position: relative;
 `
 
 export const ToggleTheme = styled(RiMoonFill)`
     color: #C8C9C9;
+`
+
+export const ThemeButton = styled.div`
+    cursor: pointer;
+    padding: 8px;
+    :hover {
+        background-color: ${props => props.theme.colors.toggleBackgroundHover};
+    }
 `

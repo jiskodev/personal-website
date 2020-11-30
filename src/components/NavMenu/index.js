@@ -1,13 +1,15 @@
 import { useAnimation } from 'framer-motion'
 import React, {useEffect} from 'react'
-import { Container, ItemsWrapper, MenuContainer, MenuLink, SocialLink, SocialLinksBox, GitHub, LinkedIn, Mail, ToggleThemeBox, ToggleTheme } from './navMenuElements'
+import { Container, ItemsWrapper, MenuContainer, MenuLink, SocialLink, SocialLinksBox, GitHub, LinkedIn, Mail, ToggleThemeBox, ThemeButton } from './navMenuElements'
+import { RiSunFill, RiMoonFill } from 'react-icons/ri'
+
 
 const MenuVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 }},
     hidden: { opacity: 0, y: "-100%", transition: { duration: 0.5 } }
 }
 
-function NavMenu({open}) {
+function NavMenu({open, isLightMode, toggleTheme}) {
     const controls = useAnimation()
 
     useEffect(() => {
@@ -43,7 +45,9 @@ function NavMenu({open}) {
                         </SocialLink>
                     </SocialLinksBox>
                     <ToggleThemeBox>
-                        <ToggleTheme size={30}></ToggleTheme>
+                        <ThemeButton onClick={toggleTheme} isLightMode>
+                            {isLightMode ? <RiSunFill style={{color: 'black'}} size={30} /> : <RiMoonFill style={{color: '#E1E4E4'}} size={30}  />}
+                        </ThemeButton>
                     </ToggleThemeBox>
                 </ItemsWrapper>
             </Container>

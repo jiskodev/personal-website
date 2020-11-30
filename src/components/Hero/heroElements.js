@@ -4,7 +4,6 @@ export const Container = styled.div`
     width: 94%;
     height: 100vh;
     margin-left: auto;
-    
     overflow: hidden;
     @media (max-width: 768px) {
         

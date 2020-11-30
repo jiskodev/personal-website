@@ -81,9 +81,9 @@ export const SideBarListItem = styled(Link)`
     margin-right: 40px;
     text-decoration: none;
     font-weight: 500;
-    color: #C8C9C9;
+    color: ${props => props.theme.colors.menuLinks};
     :hover {
-        color: #00e0f9;
+        color: ${props => props.theme.colors.linkBtnColor};
     }
 `
 
@@ -97,21 +97,21 @@ export const SideBarLink = styled.a`
 `
 
 export const LinkedIn = styled(FaLinkedin)`
-    color: #C8C9C9;
+    color: ${props => props.theme.colors.menuLinks};
     :hover {
-        color: #00e0f9;
+        color: ${props => props.theme.colors.linkBtnColor};
     }
 `
 
 export const GitHub = styled(FaGithub)`
-    color: #C8C9C9;
+    color: ${props => props.theme.colors.menuLinks};
     :hover {
-        color: #00e0f9;
+        color: ${props => props.theme.colors.linkBtnColor};
     }
 `
 export const Mail = styled(MdEmail)`
-    color: #C8C9C9;
+    color: ${props => props.theme.colors.menuLinks};
     :hover {
-        color: #00e0f9;
+        color: ${props => props.theme.colors.linkBtnColor};
     }
 `
