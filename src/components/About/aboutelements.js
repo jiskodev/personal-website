@@ -25,6 +25,7 @@ export const Title = styled.p`
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 60px;
+    color: ${props => props.theme.colors.textColor};
     @media (max-width: 768px) {
         font-size: 24px;
     }
@@ -34,6 +35,7 @@ export const Text = styled.p`
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 40px;
+    color: ${props => props.theme.colors.pColor};
     @media (max-width: 768px) {
         font-size: 18px;
     }
@@ -45,6 +47,7 @@ export const TechTitle = styled.h3`
     margin-bottom: 30px;
     font-size: 24px;
     font-weight: 500;
+    color: ${props => props.theme.colors.textColor};
     line-height: 1.5;
     @media (max-width: 768px) {
         font-size: 22px;
@@ -67,7 +70,7 @@ export const Highlight = styled.span`
         background-color: #00E0f9;
         position: absolute;
         bottom: 1px;
-        z-index: -1;
+        z-index: 0;
         @media (max-width: 768px) {
             width: 100%;
         }
@@ -87,6 +90,7 @@ export const TechText = styled.p`
     font-weight: 600;
     text-transform: uppercase;
     line-height: 2.5;
+    color: ${props => props.theme.colors.pColor};
     @media (max-width: 768px) {
         font-size: 14px;
     }

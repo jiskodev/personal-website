@@ -36,7 +36,7 @@ export const MenuContainer = styled.div`
 export const MenuLink = styled(Link)`
     margin: 20px;
     text-decoration: none;
-    color: white;
+    color: ${props => props.theme.colors.navLinksColor};
     font-size: 22px;
     font-weight: 500;
     :hover {
@@ -53,20 +53,20 @@ export const SocialLink = styled.a`
 `
 
 export const LinkedIn = styled(FaLinkedin)`
-    color: #C8C9C9;
+    color: ${props => props.theme.colors.menuLinks};
     :hover {
         color: #00e0f9;
     }
 `
 
 export const GitHub = styled(FaGithub)`
-    color: #C8C9C9;
+    color: ${props => props.theme.colors.menuLinks};
     :hover {
         color: #00e0f9;
     }
 `
 export const Mail = styled(MdEmail)`
-    color: #C8C9C9;
+    color: ${props => props.theme.colors.menuLinks};
     :hover {
         color: #00e0f9;
     }

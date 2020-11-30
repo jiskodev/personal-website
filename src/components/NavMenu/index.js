@@ -2,6 +2,7 @@ import { useAnimation } from 'framer-motion'
 import React, {useEffect} from 'react'
 import { Container, ItemsWrapper, MenuContainer, MenuLink, SocialLink, SocialLinksBox, GitHub, LinkedIn, Mail, ToggleThemeBox, ThemeButton } from './navMenuElements'
 import { RiSunFill, RiMoonFill } from 'react-icons/ri'
+import ToggleThemeButton from '../ToggleTheme'
 
 
 const MenuVariants = {
@@ -45,9 +46,7 @@ function NavMenu({open, isLightMode, toggleTheme}) {
                         </SocialLink>
                     </SocialLinksBox>
                     <ToggleThemeBox>
-                        <ThemeButton onClick={toggleTheme} isLightMode>
-                            {isLightMode ? <RiSunFill style={{color: 'black'}} size={30} /> : <RiMoonFill style={{color: '#E1E4E4'}} size={30}  />}
-                        </ThemeButton>
+                        <ToggleThemeButton toggleTheme={toggleTheme} isLightMode={isLightMode} />
                     </ToggleThemeBox>
                 </ItemsWrapper>
             </Container>

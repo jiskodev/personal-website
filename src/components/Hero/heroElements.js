@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const Container = styled.div`
     width: 94%;
@@ -31,15 +32,15 @@ export const Box = styled.div`
     
 `
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled(motion.div)`
     min-width: 250px;
     display: flex;
     justify-content: center;
 `
 
-export const Hello = styled.h2`
+export const Hello = styled(motion.h2)`
     text-align: left;
-    color: #FFFFFF;
+    color: ${props => props.theme.colors.textColor};
     font-size: 70px;
     @media (max-width: 768px) {
         font-size: 40px;
@@ -51,10 +52,10 @@ export const Text = styled.p`
     font-size: 20px;
     font-weight: 500;
     text-align: left;
-    color: #FFFFFF;
+    color: ${props => props.theme.colors.pColor};
 `
 
 export const Image = styled.img`
     transform: rotate(12deg);
-    
+    width: 100%;
 `

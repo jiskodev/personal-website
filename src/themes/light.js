@@ -3,9 +3,11 @@ export default {
     colors: {
         navLinksColor: 'rgba(0, 0, 0, 0.7)',
         textColor: '#000000',
+        pColor: 'rgba(0, 0, 0, 0.8)',
         menuLinks: 'rgba(0, 0, 0, 0.8)',
         linkBtnColor: '#000000',
-        backgroundColor: '#F2F2F2',
+        linkTextColor: '#fff',
+        backgroundColor: '#FBFBFB',
         toggleBackgroundHover: 'rgba(0, 0, 0, 0.2)'
     }
 }

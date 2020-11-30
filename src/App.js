@@ -10,6 +10,7 @@ import { ThemeProvider } from 'styled-components'
 import lightTheme from './themes/light'
 import darkTheme from './themes/dark'
 import { Container } from './components/backgroundContainer'
+import ScrollToTop from './components/utils/ScrollToTop'
 
 function App() {
   const stored = localStorage.getItem('isLightMode')
@@ -26,6 +27,7 @@ function App() {
     <div className="App">
     <Router>
       <ThemeProvider theme={isLightMode ? lightTheme : darkTheme}>
+      <ScrollToTop />
         <Container>
         <SideBar toggle={toggle} open={open} toggleTheme={toggleTheme} isLightMode={isLightMode} />
         <NavMenu open={open} toggleTheme={toggleTheme} isLightMode={isLightMode}></NavMenu>

@@ -1,5 +1,6 @@
 import gitHubImage from '../../assets/github-battle.png'
 import crudApplicationImage from '../../assets/crud-application.png'
+import ravenousImage from '../../assets/ravenous.jpg'
 
 export const Projects = [
     {
@@ -20,7 +21,13 @@ export const Projects = [
         number: '02',
         title: 'Ravenous',
         description: 'Restaurant finder app made with React and Yelp API',
-        to: 'ravenous'
+        imagePath: ravenousImage,
+        to: 'ravenous',
+        items: [
+            'React', 'CodeCademy Project', 'APIs'
+        ],
+        visitWebsite: 'https://github-battle-sergiu.netlify.app/',
+        viewCode: 'https://github.com/jiskodev/github-battle'
     },
     {
         id: '05',
@@ -28,6 +35,11 @@ export const Projects = [
         title: 'Document Visualizer',
         description: 'CRUD application that allows you to add documents, list them, see the details and edit them',
         imagePath: crudApplicationImage,
-        to: 'document-visualizer'
+        to: 'document-visualizer',
+        items: [
+            'CRUD Application', 'React', 'Hooks'
+        ],
+        visitWebsite: 'https://github-battle-sergiu.netlify.app/',
+        viewCode: 'https://github.com/jiskodev/github-battle'
     }
 ]

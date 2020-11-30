@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import {GrFormNext} from 'react-icons/gr'
+import { MdNavigateNext } from 'react-icons/md'
 
 export const Container = styled.div`
     width: 94%;
@@ -43,34 +43,35 @@ export const NumberBox = styled.div`
 export const NumberLine = styled.div`
     width: 80px;
     height: 3px;
-    background-color: #00E0F9;
+    background-color: ${props => props.theme.colors.linkBtnColor};
     border-radius: 100px;
     margin-right: 15px;
 `
 
 export const Number = styled.p`
     font-size: 14px;
-    color: #00E0F9;
+    color: ${props => props.theme.colors.linkBtnColor};
 `
 
 export const ProjectTitle = styled.h3`
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 40px;
+    color: ${props => props.theme.colors.textColor};
 `
 
 export const ProjectDescription = styled.p`
     font-size: 18px;
     font-weight: 400;
-    color: #CDCDCD;
     margin-bottom: 40px;
     line-height: 30px;
+    color: ${props => props.theme.colors.pColor};
 
 `
 
 export const ProjectLinkBox = styled.div`
     margin: 20px 0;
-    background-color: #00E0f9;
+    background-color: ${props => props.theme.colors.linkBtnColor};
     padding: 16px 32px;
     max-width: 220px;
     font-size: 18px;
@@ -78,21 +79,21 @@ export const ProjectLinkBox = styled.div`
     cursor: pointer;
     transition: 0.2s;
     :hover {
-        background-color: #fff;
+        max-width: 240px;
     }
 `
 
 export const ProjectLink = styled(Link)`
     background: transparent;
     text-decoration: none;
-    color: black;
+    color: ${props => props.theme.colors.linkTextColor};
     display: flex;
     justify-content: center;
     align-items: center;
 `
 
-export const Icon = styled(GrFormNext)`
-    color: black;
+export const Icon = styled(MdNavigateNext)`
+    color: ${props => props.theme.colors.linkTextColor}
 `
 
 export const RightBox = styled.div`

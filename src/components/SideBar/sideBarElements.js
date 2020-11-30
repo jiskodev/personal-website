@@ -27,12 +27,12 @@ export const Container = styled(motion.div)`
 `
 
 export const MenuBtn = styled(HiMenuAlt1)`
-    color: white;
+    color: ${props => props.theme.colors.textColor};
     cursor: pointer;
 `
 
 export const CloseBtn = styled(MdClose)`
-    color: white;
+    color: ${props => props.theme.colors.textColor};
     cursor: pointer;
 `
 
@@ -113,5 +113,15 @@ export const Mail = styled(MdEmail)`
     color: ${props => props.theme.colors.menuLinks};
     :hover {
         color: ${props => props.theme.colors.linkBtnColor};
+    }
+`
+
+export const ThemeBox = styled.div`
+    position: fixed;
+    top: 40px;
+    right: 40px;
+
+    @media (max-width: 768px) {
+        display: none;
     }
 `

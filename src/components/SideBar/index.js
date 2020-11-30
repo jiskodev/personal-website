@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../Logo'
 import ToggleThemeButton from '../ToggleTheme'
-import { Container, GitHub, LinkedIn, Mail, MenuBtn, CloseBtn, SideBarBox, SideBarBoxLogo, SideBarLink, SideBarLinkBox, SideBarList, SideBarListItem, SideBarMenu } from './sideBarElements'
+import { Container, GitHub, LinkedIn, ThemeBox, Mail, MenuBtn, CloseBtn, SideBarBox, SideBarBoxLogo, SideBarLink, SideBarLinkBox, SideBarList, SideBarListItem, SideBarMenu } from './sideBarElements'
 
 function SideBar({ toggle, open, toggleTheme, isLightMode }) {
     return (
@@ -35,7 +35,10 @@ function SideBar({ toggle, open, toggleTheme, isLightMode }) {
                     </SideBarLinkBox>
                 </SideBarBox>
             </Container>
-            <ToggleThemeButton toggleTheme={toggleTheme} isLightMode={isLightMode} />
+            <ThemeBox>
+                <ToggleThemeButton toggleTheme={toggleTheme} isLightMode={isLightMode} />
+            </ThemeBox>
+            
         </>
     )
 }
