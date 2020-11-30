@@ -57,5 +57,4 @@ export const Text = styled.p`
 
 export const Image = styled.img`
     transform: rotate(12deg);
-    width: 100%;
 `
