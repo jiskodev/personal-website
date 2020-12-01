@@ -5,7 +5,7 @@ import Memoji from '../../assets/memoji.png'
 function Hero() {
     return (
         <>
-            <Container>
+            <Container id='hero'>
                 <Wrapper>
                     <Box>
                         <Hello animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y : -100 }} transition={{ duration: 0.8 }}>

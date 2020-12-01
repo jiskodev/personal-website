@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { HiMenuAlt1 } from 'react-icons/hi'
 import { MdClose } from 'react-icons/md'
+import { Link as LinkS } from 'react-scroll'
 
 export const Container = styled(motion.div)`
     width: 6%;
@@ -77,12 +78,32 @@ export const SideBarList = styled.div`
     transform: rotate(270deg);
 `
 
-export const SideBarListItem = styled(Link)`
+export const SideBarListItem = styled(LinkS)`
     margin-right: 40px;
     text-decoration: none;
     font-weight: 500;
+    cursor: pointer;
     color: ${props => props.theme.colors.menuLinks};
     :hover {
+        color: ${props => props.theme.colors.linkBtnColor};
+    }
+
+    &.active {
+        color: ${props => props.theme.colors.linkBtnColor};
+    }
+`
+
+export const SideBarListItemR = styled(Link)`
+    margin-right: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    color: ${props => props.theme.colors.menuLinks};
+    :hover {
+        color: ${props => props.theme.colors.linkBtnColor};
+    }
+
+    &.active {
         color: ${props => props.theme.colors.linkBtnColor};
     }
 `

@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import { MdNavigateNext } from 'react-icons/md'
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     width: 94%;
     margin-left: auto;
     height: 100vh;
     @media (max-width: 768px) {
         width: 100%;
         padding-top: 100px;
+        height: auto;
     }
 `
 
@@ -32,6 +34,7 @@ export const LeftBox = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     max-width: 380px;
+    min-width: 360px;
 `
 
 export const NumberBox = styled.div`

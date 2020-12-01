@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import ProjectView from '../ProjectView'
+import TransitionContainer from '../TransitionContainer'
 
 function ProjectPage({ projects, toggle, open }) {
     const { handle } = useParams()
@@ -8,6 +9,7 @@ function ProjectPage({ projects, toggle, open }) {
 
     return (
         <>
+            <TransitionContainer />
             <ProjectView {...currentProject}></ProjectView>
         </>
     )

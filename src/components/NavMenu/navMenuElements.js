@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import { RiMoonFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
+import { Link as LinkS } from 'react-scroll'
 
 export const Container = styled(motion.div)`
     width: 100%;
@@ -33,12 +34,13 @@ export const MenuContainer = styled.div`
     align-items: center;
 `
 
-export const MenuLink = styled(Link)`
+export const MenuLink = styled(LinkS)`
     margin: 20px;
     text-decoration: none;
     color: ${props => props.theme.colors.navLinksColor};
     font-size: 22px;
     font-weight: 500;
+    cursor: pointer;
     :hover {
         color: #00e0f9;
     }

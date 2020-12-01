@@ -9,7 +9,7 @@ const MenuVariants = {
     hidden: { opacity: 0, y: "-100%", transition: { duration: 0.5 } }
 }
 
-function NavMenu({open, isLightMode, toggleTheme}) {
+function NavMenu({open, toggle, isLightMode, toggleTheme}) {
     const controls = useAnimation()
 
     useEffect(() => {
@@ -28,8 +28,18 @@ function NavMenu({open, isLightMode, toggleTheme}) {
                 </ItemsWrapper>
                 <MenuContainer>
                     <MenuLink>Home</MenuLink>
-                    <MenuLink>About</MenuLink>
-                    <MenuLink>Projects</MenuLink>
+                    <MenuLink to="about"
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact="true"
+                                onClick={toggle}>About</MenuLink>
+                    <MenuLink to="projects"
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact="true"
+                                onClick={toggle}>Projects</MenuLink>
                     <MenuLink>Contact</MenuLink>
                 </MenuContainer>
                 <ItemsWrapper>

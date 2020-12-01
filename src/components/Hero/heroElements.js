@@ -7,7 +7,6 @@ export const Container = styled.div`
     margin-left: auto;
     overflow: hidden;
     @media (max-width: 768px) {
-        
         width: 100%;
         margin-left: 0;
         padding-top: 100px;

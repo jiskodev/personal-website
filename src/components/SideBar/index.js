@@ -1,9 +1,14 @@
 import React from 'react'
 import Logo from '../Logo'
 import ToggleThemeButton from '../ToggleTheme'
-import { Container, GitHub, LinkedIn, ThemeBox, Mail, MenuBtn, CloseBtn, SideBarBox, SideBarBoxLogo, SideBarLink, SideBarLinkBox, SideBarList, SideBarListItem, SideBarMenu } from './sideBarElements'
+import { Container, GitHub, LinkedIn, ThemeBox, Mail, MenuBtn, SideBarListItemR, CloseBtn, SideBarBox, SideBarBoxLogo, SideBarLink, SideBarLinkBox, SideBarList, SideBarListItem, SideBarMenu } from './sideBarElements'
+import { useLocation } from 'react-router-dom'
+
 
 function SideBar({ toggle, open, toggleTheme, isLightMode }) {
+    const { pathname } = useLocation()
+    const isAtHome = pathname === '/' ? true : false
+
     return (
         <>
             <Container initial={{ y: -200, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.8 }}>
@@ -17,10 +22,37 @@ function SideBar({ toggle, open, toggleTheme, isLightMode }) {
 
                 <SideBarBox>
                     <SideBarList>
-                        <SideBarListItem>Contact</SideBarListItem>
-                        <SideBarListItem>Projects</SideBarListItem>
-                        <SideBarListItem>About</SideBarListItem>
-                        <SideBarListItem to='/'>Home</SideBarListItem>
+                        <SideBarListItemR to='/contact'>Contact</SideBarListItemR>
+                        {isAtHome ?
+                        (<SideBarListItem to="projects"
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact="true">Projects</SideBarListItem>
+                        ) : (<SideBarListItemR to={{
+                            pathname: '/',
+                            hash: '#projects'
+                        }}>About</SideBarListItemR>)}
+                        {isAtHome ?
+                        (<SideBarListItem to="about"
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact="true">About</SideBarListItem>
+                        ) : (<SideBarListItemR to={{
+                            pathname: '/',
+                            hash: '#about'
+                        }}>About</SideBarListItemR>)}
+                        {isAtHome
+                        ? (
+                            <SideBarListItem to="hero"
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact="true">Home</SideBarListItem>
+                        ): <SideBarListItemR to='/'>Home</SideBarListItemR>
+                        }
+                        
                     </SideBarList>
                 </SideBarBox>
                 <SideBarBox>

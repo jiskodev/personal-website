@@ -30,7 +30,7 @@ function App() {
       <ScrollToTop />
         <Container>
         <SideBar toggle={toggle} open={open} toggleTheme={toggleTheme} isLightMode={isLightMode} />
-        <NavMenu open={open} toggleTheme={toggleTheme} isLightMode={isLightMode}></NavMenu>
+        <NavMenu toggle={toggle} open={open} toggleTheme={toggleTheme} isLightMode={isLightMode}></NavMenu>
         <Route exact path='/'>
           <Home projects={Projects} />
         </Route>

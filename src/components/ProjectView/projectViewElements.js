@@ -52,6 +52,7 @@ export const TextDescription = styled.p`
 
 export const BoxRight = styled.div`
     margin-bottom: 60px;
+    min-width: 340px;
 `
 
 export const LightLine = styled.div`

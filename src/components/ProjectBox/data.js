@@ -1,6 +1,7 @@
-import gitHubImage from '../../assets/github-battle.png'
+import gitHubImage from '../../assets/github-battle.webp'
 import crudApplicationImage from '../../assets/crud-application.png'
 import ravenousImage from '../../assets/ravenous.jpg'
+import menutifyImage from '../../assets/menutify.png'
 
 export const Projects = [
     {
@@ -24,7 +25,20 @@ export const Projects = [
         imagePath: ravenousImage,
         to: 'ravenous',
         items: [
-            'React', 'CodeCademy Project', 'APIs'
+            'React', 'CodeCademy Project', 'Rest APIs'
+        ],
+        visitWebsite: 'https://github-battle-sergiu.netlify.app/',
+        viewCode: 'https://github.com/jiskodev/github-battle'
+    },
+    {
+        id: '03',
+        number: '03',
+        title: 'Menutify',
+        description: 'Menu creator for Restaurants',
+        imagePath: menutifyImage,
+        to: 'menutify',
+        items: [
+            'React Hooks', 'JSON-Box.io', 'Web Design'
         ],
         visitWebsite: 'https://github-battle-sergiu.netlify.app/',
         viewCode: 'https://github.com/jiskodev/github-battle'
@@ -39,7 +53,7 @@ export const Projects = [
         items: [
             'CRUD Application', 'React', 'Hooks'
         ],
-        visitWebsite: 'https://github-battle-sergiu.netlify.app/',
+        visitWebsite: 'https://crud-app-sergio.netlify.app/',
         viewCode: 'https://github.com/jiskodev/github-battle'
     }
 ]

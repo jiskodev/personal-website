@@ -4,7 +4,7 @@ import { Container, Highlight, Text, Title, Wrapper, TechText, TechTextWrapper, 
 function About() {
     return (
         <>
-            <Container>
+            <Container  id='about'>
                 <Wrapper>
                     <Title>
                         <Highlight>About me</Highlight>
