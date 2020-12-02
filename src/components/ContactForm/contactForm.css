@@ -123,3 +123,9 @@ form button:hover{
     background-color: #fff;
     transition: 0.1s ease-in;
 }
+
+@media (max-width: 768px) {
+    .contact_form {
+        width: 90%;
+    }
+}

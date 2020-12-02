@@ -1,6 +1,6 @@
 import { useAnimation } from 'framer-motion'
 import React, {useEffect} from 'react'
-import { Container, ItemsWrapper, MenuContainer, MenuLink, SocialLink, SocialLinksBox, GitHub, LinkedIn, Mail, ToggleThemeBox } from './navMenuElements'
+import { Container, ItemsWrapper, MenuContainer, MenuLink, MenuLinkR, SocialLink, SocialLinksBox, GitHub, LinkedIn, Mail, ToggleThemeBox } from './navMenuElements'
 import ToggleThemeButton from '../ToggleTheme'
 
 
@@ -27,7 +27,8 @@ function NavMenu({open, toggle, isLightMode, toggleTheme}) {
                 <ItemsWrapper>
                 </ItemsWrapper>
                 <MenuContainer>
-                    <MenuLink>Home</MenuLink>
+                    <MenuLinkR to='/'
+                        onClick={toggle}>Home</MenuLinkR>
                     <MenuLink to="about"
                                 smooth={true}
                                 duration={500}
@@ -40,7 +41,8 @@ function NavMenu({open, toggle, isLightMode, toggleTheme}) {
                                 spy={true}
                                 exact="true"
                                 onClick={toggle}>Projects</MenuLink>
-                    <MenuLink>Contact</MenuLink>
+                    <MenuLinkR to='/contact'
+                                onClick={toggle}>Contact</MenuLinkR>
                 </MenuContainer>
                 <ItemsWrapper>
                     <SocialLinksBox>

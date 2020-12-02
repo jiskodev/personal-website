@@ -46,6 +46,18 @@ export const MenuLink = styled(LinkS)`
     }
 `
 
+export const MenuLinkR = styled(Link)`
+    margin: 20px;
+    text-decoration: none;
+    color: ${props => props.theme.colors.navLinksColor};
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    :hover {
+        color: #00e0f9;
+    }
+`
+
 export const SocialLinksBox = styled.div`
     display: flex;
 `
