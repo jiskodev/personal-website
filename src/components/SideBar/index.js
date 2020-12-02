@@ -32,7 +32,7 @@ function SideBar({ toggle, open, toggleTheme, isLightMode }) {
                         ) : (<SideBarListItemR to={{
                             pathname: '/',
                             hash: '#projects'
-                        }}>About</SideBarListItemR>)}
+                        }}>Projects</SideBarListItemR>)}
                         {isAtHome ?
                         (<SideBarListItem to="about"
                                 smooth={true}

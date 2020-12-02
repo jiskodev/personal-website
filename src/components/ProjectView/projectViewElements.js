@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { MdNavigateNext } from 'react-icons/md'
+import { motion } from 'framer-motion'
 
 export const Container = styled.div`
     width: 94%;
@@ -13,6 +14,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
     width: 75%;
     margin: 0 auto;
+    overflow: hidden;
     @media (max-width: 768px) {
         width: 90%;
     }
@@ -35,7 +37,7 @@ export const BoxLeft = styled.div`
     text-align: left;
 `
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
     font-size: 50px;
     font-weight: 600;
     color: ${props => props.theme.colors.textColor};

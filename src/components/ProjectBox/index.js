@@ -15,7 +15,9 @@ function ProjectBox({ number, title, description, imagePath, to }) {
     useEffect(() => {
         if (inView) {
             controls.start('visible')
-        }   
+        }   else if (!inView)  {
+            controls.start('hidden')
+        }
     }, [controls, inView])
     return (
         <div>

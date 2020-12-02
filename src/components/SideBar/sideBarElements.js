@@ -79,7 +79,7 @@ export const SideBarList = styled.div`
 `
 
 export const SideBarListItem = styled(LinkS)`
-    margin-right: 40px;
+    margin-right: 50px;
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
@@ -94,7 +94,7 @@ export const SideBarListItem = styled(LinkS)`
 `
 
 export const SideBarListItemR = styled(Link)`
-    margin-right: 40px;
+    margin-right: 50px;
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;

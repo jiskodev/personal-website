@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Home from './components/pages/Home'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import { Projects } from './components/ProjectBox/data'
 import ProjectPage from './components/pages/ProjectPage';
@@ -11,6 +11,7 @@ import lightTheme from './themes/light'
 import darkTheme from './themes/dark'
 import { Container } from './components/backgroundContainer'
 import ScrollToTop from './components/utils/ScrollToTop'
+import Contact from './components/pages/Contact';
 
 function App() {
   const stored = localStorage.getItem('isLightMode')
@@ -31,13 +32,17 @@ function App() {
         <Container>
         <SideBar toggle={toggle} open={open} toggleTheme={toggleTheme} isLightMode={isLightMode} />
         <NavMenu toggle={toggle} open={open} toggleTheme={toggleTheme} isLightMode={isLightMode}></NavMenu>
-        <Route exact path='/'>
-          <Home projects={Projects} />
-        </Route>
-
-        <Route path='/:handle'>
-          <ProjectPage toggle={toggle} open={open} projects={Projects} />
-        </Route>
+        <Switch>
+          <Route exact path='/'>
+            <Home projects={Projects} />
+          </Route>
+          <Route exact path='/contact'>
+            <Contact />
+          </Route>
+          <Route path='/:handle'>
+            <ProjectPage toggle={toggle} open={open} projects={Projects} />
+          </Route>
+        </Switch>
         </Container>
         
       </ThemeProvider>
