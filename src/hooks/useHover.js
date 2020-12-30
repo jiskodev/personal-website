@@ -1,13 +1,29 @@
-import React from 'react'
+import React, {useState, useCallback, useRef} from 'react'
 
 export default function useHover() {
-    const [hovering, setHovering] = React.useState(false)
+    const [value, setValue] = useState(false);
 
-    const onMouseOver  = () => setHovering(true)
-    const onMouseOut = () => setHovering(false)
+    const handleMouseEnter = useCallback(() => setValue(true), []);
+    const handleMouseLeave = useCallback(() => setValue(false), []);
 
-    return [hovering, {
-        onMouseOut,
-        onMouseOver
-    }]
+    const ref = useRef();
+    
+    const callbackRef = useCallback(
+        (node) => {
+        if (ref.current) {
+            ref.current.removeEventListener("mouseenter", handleMouseEnter);
+            ref.current.removeEventListener("mouseleave", handleMouseLeave);
+        }
+    
+        ref.current = node;
+    
+        if (ref.current) {
+            ref.current.addEventListener("mouseenter", handleMouseEnter);
+            ref.current.addEventListener("mouseleave", handleMouseLeave);
+        }
+        },
+        [handleMouseEnter, handleMouseLeave]
+    );
+
+    return [callbackRef, value];
 }
