@@ -3,6 +3,8 @@ import { Container, ProjectWrapper, HoveringWrapper, ImageWrapper, ImageOpacity,
 import useHover from '../../hooks/useHover'
 import { useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import useWindowSize from '../../hooks/useWindowSize'
+
 
 const ScrollVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 1 }},
@@ -19,14 +21,21 @@ const hoverInfoVariants = {
     hidden: { scale: 1, transition: { duration: 0.5 } }
 }
 
+const hoverInfoMobileVariants = {
+    visible: { y: -100, transition: { duration: 0.5 }},
+    hidden: { y: 0, transition: { duration: 0.5 } }
+}
+
 const hoverNumberVariants = {
     visible: { opacity: 1, y: -50, transition: {delay: 0.5, duration: 0.5 }},
     hidden: { opacity: 0, y: 0, transition: { duration: 0.5 } }
 }
 
-function Project ({ title, description, imagePath, number, to}) {
+function ProjectBox ({ title, description, imagePath, number, to}) {
     const [attrs, hovering] = useHover()
+    const windowSize = useWindowSize();
 
+    const isMobile = windowSize.width <= 698 || windowSize.height <= 696;
     const hoverControls = useAnimation()
     const viewControls = useAnimation()
     const [ref, inView] = useInView()
@@ -74,12 +83,12 @@ function Project ({ title, description, imagePath, number, to}) {
                 <InfoWrapper
                 animate={hoverControls}
                 initial="hidden"
-                variants={hoverInfoVariants}
+                variants={isMobile ? hoverInfoMobileVariants : hoverInfoVariants}
                 style={{ originX: 1, originY: 1 }}
                 >
                     <ProjectTitle>{title}</ProjectTitle>
                     <ProjectDescription>{description}</ProjectDescription>
-                    <ProjectLink to={`/${to}`}>View Project</ProjectLink>
+                    <ProjectLink hovering={hovering} to={`/projects/${to}`}>View Project</ProjectLink>
                 </InfoWrapper>
             </ProjectWrapper>
         </ProjectContainer>
@@ -94,7 +103,7 @@ function ProjectSummary({ projects }) {
         <>
         <Container id='projects'>
                 {projects.map(project => (
-                    <Project key={project.id} {...project} />
+                    <ProjectBox key={project.id} {...project} />
                     ))}
         </Container>
         </>

@@ -10,7 +10,7 @@ function ProjectView({ title, imagePath, description, items, visitWebsite, viewC
                 <Wrapper>
                     <WrapperHead>
                         <BoxLeft>
-                            <Title initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 60 }} transition={{ duration: 0.8, delay: 0.3 }}>{title}</Title>
+                            <Title initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} transition={{ duration: 0.8, delay: 0.3 }}>{title}</Title>
                             <TextDescription>{description}</TextDescription>
                             <LinksBox>
                                 {visitWebsite ? <ProjectLinkBox><OutsideLink href={visitWebsite} target='_blank'>Visit Website<Icon size={30}></Icon></OutsideLink></ProjectLinkBox> : null }

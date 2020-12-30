@@ -18,7 +18,7 @@ export const Container = styled(motion.div)`
     padding-bottom: 20px;
     position: fixed;
     text-align: center;
-    z-index: 10;
+    z-index: 23;
     @media (max-width: 768px) {
         width: 100%;
         height: 80px;

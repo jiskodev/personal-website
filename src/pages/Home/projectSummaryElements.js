@@ -5,6 +5,9 @@ import { motion } from 'framer-motion'
 export const Container = styled.div`
     width: 94%;
     margin-left: auto;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `
 export const ProjectContainer = styled(motion.div)`
     display: flex;
@@ -12,6 +15,9 @@ export const ProjectContainer = styled(motion.div)`
     align-items: center;
     height: 100vh;
     width: 100%;
+    @media (max-width: 768px) {
+        height: auto;
+    }
 `
 
 
@@ -21,6 +27,10 @@ export const ProjectWrapper = styled(motion.div)`
     margin: 100px auto;
     position: relative;
     cursor: pointer;
+    @media (max-width: 768px) {
+        width: 90%;
+        height: 500px;
+    }
 `
 export const HoveringWrapper = styled.div`
     position: absolute;
@@ -42,6 +52,9 @@ export const ImageOpacity = styled.div`
     background-color: ${props => props.theme.colors.backgroundColor};
     opacity: 0.4;
     z-index: 2;
+    @media (max-width: 768px) {
+        opacity: 0.7;
+    }
 `
 
 export const HoveringBackground = styled(motion.div)`
@@ -66,24 +79,41 @@ export const InfoWrapper = styled(motion.div)`
     position: absolute;
     left: 80px;
     bottom: 60px;
+    @media (max-width: 768px) {
+        left: 30px;
+        bottom: 40px;
+    }
 `
 
 export const ProjectTitle = styled.h3`
     font-size: 40px;
     margin-bottom: 20px;
     z-index: 10;
+    color: ${props => props.theme.colors.textColor};
+    @media (max-width: 768px) {
+        font-size: 22px;
+    }
 `
 export const ProjectDescription = styled.p`
     margin-bottom: 20px;
     z-index: 10;
+    color: ${props => props.theme.colors.textColor};
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
 `
 export const ProjectLink = styled(Link)`
     z-index: 10;
-    background-color: ${props => props.theme.colors.linkBtnColor};
+    background-color: ${props => props.hovering ? props.theme.colors.textColor : props.theme.colors.linkBtnColor};
     padding: 16px 32px;
     text-decoration: none;
+    font-weight: 500;
     display: inline-flex;
     color: ${props => props.theme.colors.linkTextColor};
+    @media (max-width: 768px) {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
 `
 
 export const ProjectNumber = styled(motion.p)`

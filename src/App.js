@@ -3,7 +3,7 @@ import Home from './pages/Home'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import { Projects } from './components/ProjectBox/data'
-import ProjectPage from './components/pages/ProjectPage';
+import Project from './pages/Project';
 import SideBar from './components/SideBar'
 import NavMenu from './components/NavMenu'
 import { ThemeProvider } from 'styled-components'
@@ -39,8 +39,8 @@ function App() {
           <Route exact path='/contact'>
             <Contact />
           </Route>
-          <Route path='/:handle'>
-            <ProjectPage toggle={toggle} open={open} projects={Projects} />
+          <Route path='/projects/:handle'>
+            <Project toggle={toggle} open={open} projects={Projects} />
           </Route>
         </Switch>
         </Container>

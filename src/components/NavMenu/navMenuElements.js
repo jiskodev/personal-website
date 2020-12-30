@@ -14,7 +14,7 @@ export const Container = styled(motion.div)`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    z-index: 8;
+    z-index: 22;
     position: fixed;
     background-color: ${props => props.theme.colors.backgroundColor};
 `

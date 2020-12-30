@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { Canvas, ListItem } from './tagCloudElements';
+import { CanvasContainer, Canvas, ListItem } from './tagCloudElements';
 import useWindowSize from '../../hooks/useWindowSize'
 
 const TagCanvas = window.TagCanvas
@@ -29,7 +29,7 @@ function TagCloud () {
 
     return (
     <div>
-        <div id="myCanvasContainer">
+        <CanvasContainer id="myCanvasContainer">
         <Canvas width={isMobile ? '320px' : '520px'} height={isMobile ? '320px' : '520px'} id='myCanvas'>
         <p>
             Anything in here will be replaced on browsers that do not support the canvas
@@ -37,7 +37,7 @@ function TagCloud () {
             </p>
         </Canvas>
         
-        </div>
+        </CanvasContainer>
         <div id="tags">
         <ul>
             <ListItem><a href="/">HTML5</a></ListItem>
