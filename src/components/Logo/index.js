@@ -6,7 +6,7 @@ function Logo() {
         <LogoBox>
             <LogoLink to='/'>
             
-            <svg style={{width: "100%", height: "auto"}} class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 724.55 351.81">
+            <svg style={{width: "100%", height: "auto"}} className="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 724.55 351.81">
             <defs>
             <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="#6BBAE7" />
