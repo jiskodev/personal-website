@@ -6,6 +6,8 @@ export const Container = styled.div`
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     @media (max-width: 768px) {
         width: 100%;
         margin: 0;
@@ -14,17 +16,17 @@ export const Container = styled.div`
 `
 
 export const Wrapper = styled.div`
-    width: 70%;
-    margin: 0 auto;
+    width: 40%;
     @media (max-width: 768px) {
-        width: 95%;
+        width: 90%;
+        margin: 0 auto;
     }
 `
 
 export const Title = styled.p`
     font-size: 30px;
     font-weight: 500;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     color: ${props => props.theme.colors.textColor};
     @media (max-width: 768px) {
         font-size: 24px;
@@ -32,9 +34,9 @@ export const Title = styled.p`
 `
 
 export const Text = styled.p`
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: ${props => props.theme.colors.pColor};
     @media (max-width: 768px) {
         font-size: 18px;
@@ -42,17 +44,6 @@ export const Text = styled.p`
 
 `
 
-export const TechTitle = styled.h3`
-    margin-top: 110px;
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: 500;
-    color: ${props => props.theme.colors.textColor};
-    line-height: 1.5;
-    @media (max-width: 768px) {
-        font-size: 22px;
-    }
-`
 
 export const ALink = styled.a`
     color: #00E0F9;
@@ -77,21 +68,3 @@ export const Highlight = styled.span`
     }
 `
 
-export const TechTextWrapper = styled.div`
-    width: 70%;
-    margin: 0 auto;
-    @media (max-width: 768px) {
-        width: 90%;
-    }
-`
-
-export const TechText = styled.p`
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 2.5;
-    color: ${props => props.theme.colors.pColor};
-    @media (max-width: 768px) {
-        font-size: 14px;
-    }
-`

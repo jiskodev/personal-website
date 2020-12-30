@@ -50,8 +50,11 @@ export const Projects = [
         description: 'CRUD application that allows you to add documents, list them, see the details and edit them',
         imagePath: crudApplicationImage,
         to: 'document-visualizer',
+        longDescription: [
+            ''
+        ],
         items: [
-            'CRUD Application', 'React', 'Hooks'
+            'CRUD Application', 'React', 'Filtering and pagination'
         ],
         visitWebsite: 'https://crud-app-sergio.netlify.app/',
         viewCode: 'https://github.com/jiskodev/github-battle'

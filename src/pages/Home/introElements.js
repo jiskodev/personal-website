@@ -41,6 +41,7 @@ export const Hello = styled(motion.h2)`
     text-align: left;
     color: ${props => props.theme.colors.textColor};
     font-size: 70px;
+    max-width: 440px;
     @media (max-width: 768px) {
         font-size: 40px;
         align-self: flex-start;

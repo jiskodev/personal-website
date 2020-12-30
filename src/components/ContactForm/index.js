@@ -1,11 +1,16 @@
 import React from 'react'
 import './contactForm.css'
+import TextScramble from '@twistezo/react-text-scramble'
+
+const texts = [
+    "Say hello"
+]
 
 function ContactForm() {
     return (
         <>
         <div class="contact_form">
-            <div class="sayHello">Say hello</div>
+            <div class="sayHello"><TextScramble texts={texts}/></div>
             <div class="blue-line"></div>
                 <form class="contactForm" data-netlify="true">
                     <div class="email-form">

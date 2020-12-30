@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Home from './components/pages/Home'
+import Home from './pages/Home'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import { Projects } from './components/ProjectBox/data'

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container, Highlight, Text, Title, Wrapper, TechText, TechTextWrapper, TechTitle, ALink } from './aboutelements'
+import TagCloud from '../../components/TagCloud'
+import { Container, Wrapper, Title, Text, Highlight, ALink } from './aboutElements'
 
 function About() {
     return (
@@ -14,11 +15,9 @@ function About() {
                     <Text>I've took a lot of online courses like: <ALink href="https://www.codecademy.com/">CodeCademy Web Development Career Path</ALink>, <ALink href="https://ui.dev/">React, Router, Hooks and Redux at UI.dev</ALink>, and several <ALink href="https://www.freecodecamp.org/">freeCodeCademy certifications.</ALink></Text>
                     <Text>I think that the best way to learn is by practicing, so I also did a bunch of personal projects with the knowledge I gathered from the courses, you can check them below</Text>
                     <Text>I'm hard working, super curious, passionate, commited, and also a fast learner.</Text>
-
-                    <TechTitle>My current <Highlight>stack</Highlight> of languages/technologies is:</TechTitle>
-                    <TechTextWrapper>
-                        <TechText>HTML5 - CSS3 - JAVASCRIPT - REACTJS - REDUX - SASS - WEBPACK - BABEL - GATSBY - GRAPHQL - FRAMERMOTION - STYLEDCOMPONENTS</TechText>
-                    </TechTextWrapper>
+                </Wrapper>
+                <Wrapper>
+                    <TagCloud />
                 </Wrapper>
             </Container>
         </>
