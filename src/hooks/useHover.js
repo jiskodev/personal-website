@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useRef} from 'react'
+import {useState, useCallback, useRef} from 'react'
 
 export default function useHover() {
     const [value, setValue] = useState(false);

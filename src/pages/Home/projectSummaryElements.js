@@ -6,6 +6,14 @@ export const Container = styled.div`
     width: 94%;
     margin-left: auto;
 `
+export const ProjectContainer = styled(motion.div)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+`
+
 
 export const ProjectWrapper = styled(motion.div)`
     width: 60%;
@@ -31,8 +39,8 @@ export const ImageOpacity = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: black;
-    opacity: 0.5;
+    background-color: ${props => props.theme.colors.backgroundColor};
+    opacity: 0.4;
     z-index: 2;
 `
 

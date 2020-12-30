@@ -1,14 +1,21 @@
 import React, {useEffect} from 'react'
+import { Canvas, ListItem } from './tagCloudElements';
+import useWindowSize from '../../hooks/useWindowSize'
 
 const TagCanvas = window.TagCanvas
 
 function TagCloud () {
+    const windowSize = useWindowSize();
+
+    const isMobile = windowSize.width <= 768 || windowSize.height <= 696;
+
     const renderTagCloud = () => {
         try {
             TagCanvas.Start("myCanvas", "tags", {
                 textColour: "#00E0F9",
                 outlineColour: "transparent",
                 reverse: true,
+                textHeight: 14,
                 depth: 0.8,
                 maxSpeed: 0.05
             });
@@ -23,18 +30,19 @@ function TagCloud () {
     return (
     <div>
         <div id="myCanvasContainer">
-        <canvas width="600" height="600" id="myCanvas">
-            <p>
+        <Canvas width={isMobile ? '320px' : '520px'} height={isMobile ? '320px' : '520px'} id='myCanvas'>
+        <p>
             Anything in here will be replaced on browsers that do not support the canvas
             element
             </p>
-        </canvas>
+        </Canvas>
+        
         </div>
         <div id="tags">
         <ul>
-            <li><a href="/">HTML5</a></li>
-            <li><a href="/">CSS3</a></li>
+            <ListItem><a href="/">HTML5</a></ListItem>
             <li><a href="/">JAVASCRIPT</a></li>
+            <li><a href="/">CSS3</a></li>
             <li><a href="/">SASS</a></li>
             <li><a href="/">STYLED COMPONENTS</a></li>
             <li><a href="/">REACT</a></li>

@@ -44,7 +44,6 @@ function App() {
           </Route>
         </Switch>
         </Container>
-        
       </ThemeProvider>
     </Router>
       

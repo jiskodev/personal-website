@@ -16,12 +16,19 @@ export const Container = styled.div`
 `
 
 export const Wrapper = styled.div`
-    width: 40%;
+    width: 35%;
     @media (max-width: 768px) {
         width: 90%;
         margin: 0 auto;
     }
 `
+export const TextWrapper = styled.div`
+    width: 80%;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`
+
 
 export const Title = styled.p`
     font-size: 30px;
