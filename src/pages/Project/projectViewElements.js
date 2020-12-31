@@ -82,30 +82,6 @@ export const LinksBox = styled.div`
     }
 `
 
-export const ProjectLinkBox = styled.div`
-    margin: 20px 0;
-    background-color: ${props => props.theme.colors.linkBtnColor};
-    padding: 16px 32px;
-    max-width: 220px;
-    min-width: 210px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-right: 20px;
-    transition: 0.2s;
-    :hover {
-        max-width: 240px;
-    }
-`
-
-export const OutsideLink = styled.a`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: ${props => props.theme.colors.linkTextColor}
-`
-
 export const Icon = styled(MdNavigateNext)`
     color: ${props => props.theme.colors.linkTextColor}
 `

@@ -2,6 +2,7 @@ import { useAnimation } from 'framer-motion'
 import React, {useEffect} from 'react'
 import { Container, ItemsWrapper, MenuContainer, MenuLink, MenuLinkR, SocialLink, SocialLinksBox, GitHub, LinkedIn, Mail, ToggleThemeBox } from './navMenuElements'
 import ToggleThemeButton from '../ToggleTheme'
+import HoverElement from '../HoverElement'
 
 
 const MenuVariants = {
@@ -27,8 +28,11 @@ function NavMenu({open, toggle, isLightMode, toggleTheme}) {
                 <ItemsWrapper>
                 </ItemsWrapper>
                 <MenuContainer>
+                
                     <MenuLinkR to='/'
-                        onClick={toggle}>Home</MenuLinkR>
+                        onClick={toggle}><HoverElement>Home</HoverElement></MenuLinkR>
+                
+                    
                     <MenuLink to="about"
                                 smooth={true}
                                 duration={500}

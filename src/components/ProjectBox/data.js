@@ -2,6 +2,9 @@ import gitHubImage from '../../assets/github-battle.webp'
 import crudApplicationImage from '../../assets/crud-application.png'
 import ravenousImage from '../../assets/ravenous.jpg'
 import menutifyImage from '../../assets/menutify.png'
+import crudAppImage2 from '../../assets/doc-viewer.png'
+import githubImage2 from '../../assets/github-battle-vs.png'
+import githubImage3 from '../../assets/github-battle-results.png'
 
 export const Projects = [
     {
@@ -14,6 +17,7 @@ export const Projects = [
         items: [
             'React Context', 'React Router', 'Code Splitting with React Router'
         ],
+        moreImages: [{ imagePath: githubImage2, title: 'Battle Route'}, {imagePath: githubImage3, title: 'Results Route'}],
         visitWebsite: 'https://github-battle-sergiu.netlify.app/',
         viewCode: 'https://github.com/jiskodev/github-battle'
     },
@@ -56,6 +60,7 @@ export const Projects = [
         items: [
             'CRUD Application', 'React', 'Filtering and pagination'
         ],
+        moreImages: [crudAppImage2],
         visitWebsite: 'https://crud-app-sergio.netlify.app/',
         viewCode: 'https://github.com/jiskodev/github-battle'
     }

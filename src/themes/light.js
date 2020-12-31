@@ -8,6 +8,7 @@ export default {
         linkBtnColor: '#000000',
         linkTextColor: '#fff',
         backgroundColor: '#FBFBFB',
-        toggleBackgroundHover: 'rgba(0, 0, 0, 0.2)'
+        toggleBackgroundHover: 'rgba(0, 0, 0, 0.2)',
+        hoverBtnColor: '#00E0F9'
     }
 }
