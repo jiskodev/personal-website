@@ -19,18 +19,14 @@ function ProjectView({ title, imagePath, description, items, visitWebsite, viewC
                         </BoxLeft>
                         <BoxRight>
                         <LightLine></LightLine>
-                            <ListDescription>
-                                {items[0]}
+                                {items.map(item => (
+                                    <>
+                                    <ListDescription>
+                                {item}
                             </ListDescription>
                             <LightLine></LightLine>
-                            <ListDescription>
-                                {items[1]}
-                            </ListDescription>
-                            <LightLine></LightLine>
-                            <ListDescription>
-                                {items[2]}
-                            </ListDescription>
-                            <LightLine></LightLine>
+                            </>
+                                ))}
                         </BoxRight>
                     </WrapperHead>
                     <ProjectImage src={imagePath}></ProjectImage>

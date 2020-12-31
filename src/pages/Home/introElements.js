@@ -48,7 +48,7 @@ export const Hello = styled(motion.h2)`
     }
 `
 
-export const Text = styled.div`
+export const Text = styled(motion.div)`
     font-size: 20px;
     font-weight: 500;
     text-align: left;

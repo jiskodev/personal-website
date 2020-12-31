@@ -45,12 +45,12 @@ function SideBar({ toggle, open, toggleTheme, isLightMode }) {
                         }}>About</SideBarListItemR>)}
                         {isAtHome
                         ? (
-                            <SideBarListItem to="hero"
+                            <SideBarListItem nomargin to="hero"
                                 smooth={true}
                                 duration={500}
                                 spy={true}
                                 exact="true">Home</SideBarListItem>
-                        ): <SideBarListItemR to='/'>Home</SideBarListItemR>
+                        ): <SideBarListItemR nomargin to='/'>Home</SideBarListItemR>
                         }
                         
                     </SideBarList>

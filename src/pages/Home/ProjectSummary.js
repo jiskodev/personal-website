@@ -7,8 +7,8 @@ import useWindowSize from '../../hooks/useWindowSize'
 
 
 const ScrollVariants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 1 }},
-    hidden: { opacity: 0, y: 400 }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7 }},
+    hidden: { opacity: 0, y: 100 }
 }
 
 const hoverVariants = {
@@ -17,8 +17,8 @@ const hoverVariants = {
 }
 
 const hoverInfoVariants = {
-    visible: { scale: 1.4, transition: { duration: 0.5 }},
-    hidden: { scale: 1, transition: { duration: 0.5 } }
+    visible: { x: -120, y: -100, scale: 1.1, transition: { duration: 0.5 }},
+    hidden: { x: 0, y: 0, scale: 1, transition: { duration: 0.5 } }
 }
 
 const hoverInfoMobileVariants = {

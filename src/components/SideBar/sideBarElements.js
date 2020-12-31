@@ -9,6 +9,7 @@ import { Link as LinkS } from 'react-scroll'
 
 export const Container = styled(motion.div)`
     width: 6%;
+    min-width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -80,7 +81,7 @@ export const SideBarList = styled.div`
 `
 
 export const SideBarListItem = styled(LinkS)`
-    margin-right: 50px;
+    margin-right: ${props => props.nomargin ? '0px' : '50px'};
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
@@ -95,7 +96,7 @@ export const SideBarListItem = styled(LinkS)`
 `
 
 export const SideBarListItemR = styled(Link)`
-    margin-right: 50px;
+    margin-right: ${props => props.nomargin ? '0px' : '50px'};
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;

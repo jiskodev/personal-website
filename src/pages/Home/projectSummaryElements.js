@@ -79,9 +79,11 @@ export const InfoWrapper = styled(motion.div)`
     position: absolute;
     left: 80px;
     bottom: 60px;
+    padding-right: 80px;
     @media (max-width: 768px) {
         left: 30px;
         bottom: 40px;
+        padding-right: 30px;
     }
 `
 
