@@ -3,7 +3,6 @@ import About from './About'
 import Intro from './Intro'
 import ProjectSummary from './ProjectSummary'
 import { Container } from '../../components/backgroundContainer'
-import ContactSection from './ContactSection'
 
 function Home({ projects }) {
     return (
@@ -12,7 +11,6 @@ function Home({ projects }) {
                 <Intro />
                 <About />
                 <ProjectSummary projects={projects} />
-                <ContactSection />
             </Container>
         </>
     )

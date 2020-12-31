@@ -48,8 +48,8 @@ export const Projects = [
         viewCode: 'https://github.com/jiskodev/github-battle'
     },
     {
-        id: '05',
-        number: '05',
+        id: '04',
+        number: '04',
         title: 'Document Visualizer',
         description: 'CRUD application that allows you to add documents, list them, see the details and edit them',
         imagePath: crudApplicationImage,
