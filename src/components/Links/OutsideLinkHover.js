@@ -1,7 +1,7 @@
 import React from 'react'
 import useHover from '../../hooks/useHover'
 import { AnimatePresence } from 'framer-motion'
-import { Container, HoverBox, LinkBox, LinkContent } from './linkElements'
+import { HoverBox, LinkBox, LinkContent } from './linkElements'
 
 function OutsideLinkHover({children, path, target}) {
     const [attrs, hovering] = useHover()
