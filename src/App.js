@@ -12,6 +12,7 @@ import darkTheme from './themes/dark'
 import { Container } from './components/backgroundContainer'
 import ScrollToTop from './components/utils/ScrollToTop'
 import Contact from './components/pages/Contact';
+import NoMatchPage from './pages/404';
 
 function App() {
   const stored = localStorage.getItem('isLightMode')
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path='/projects/:handle'>
             <Project toggle={toggle} open={open} projects={Projects} />
+          </Route>
+          <Route path='*'>
+            <NoMatchPage />
           </Route>
         </Switch>
         </Container>

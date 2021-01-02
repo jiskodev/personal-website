@@ -62,7 +62,7 @@ export const HoveringBackground = styled(motion.div)`
     width: 0;
     height: 100%;
     opacity: 0.9;
-    background-color: ${props => props.theme.colors.linkBtnColor};
+    background-color: ${props => props.theme.colors.projectBackground};
     z-index: 3;
 `
 
@@ -121,7 +121,7 @@ export const ProjectLink = styled(Link)`
 export const ProjectNumber = styled(motion.p)`
     font-size: 70px;
     font-weight: 500;
-    color: white;
+    color: ${props => props.theme.colors.textColor};
     position: absolute;
     right: 0;
     top: 0;

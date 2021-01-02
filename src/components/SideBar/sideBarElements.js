@@ -20,7 +20,7 @@ export const Container = styled(motion.div)`
     position: fixed;
     text-align: center;
     z-index: 23;
-    @media (max-width: 768px) {
+    @media (max-width: 768px), (max-height: 740px) {
         width: 100%;
         height: 80px;
         flex-direction: row;
@@ -41,11 +41,11 @@ export const CloseBtn = styled(MdClose)`
 
 export const SideBarMenu = styled.div`
     display: flex;
-    @media (max-width: 768px) {
+    @media (max-width: 768px), (max-height: 740px) {
         align-items: center;
         height: 60px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (min-height: 740px) {
         display: none;
     } 
 `
@@ -56,7 +56,7 @@ export const SideBarBox = styled.div`
     min-height: 100px;
     display: flex;
     justify-content: center;
-    @media (max-width: 768px) {
+    @media (max-width: 768px), (max-height: 740px) {
         display: none;
     }
 `
@@ -69,7 +69,7 @@ export const SideBarBoxLogo = styled.div`
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
-    @media (max-width: 768px) {
+    @media (max-width: 768px), (max-height: 740px) {
         align-self: center;
         padding: 0;
         width: 30px;
@@ -81,7 +81,7 @@ export const SideBarList = styled.div`
 `
 
 export const SideBarListItem = styled(LinkS)`
-    margin-right: ${props => props.nomargin ? '0px' : '50px'};
+    margin-right: ${props => props.nomargin === 1 ? '0px' : '50px'};
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
@@ -144,7 +144,7 @@ export const ThemeBox = styled.div`
     top: 40px;
     right: 40px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 768px), (max-height: 740px) {
         display: none;
     }
 `

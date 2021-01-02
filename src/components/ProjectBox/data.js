@@ -60,7 +60,7 @@ export const Projects = [
         items: [
             'CRUD Application', 'React', 'Filtering and pagination'
         ],
-        moreImages: [crudAppImage2],
+        moreImages: [{imagePath: crudAppImage2, title: 'Document view'}],
         visitWebsite: 'https://crud-app-sergio.netlify.app/',
         viewCode: 'https://github.com/jiskodev/github-battle'
     }

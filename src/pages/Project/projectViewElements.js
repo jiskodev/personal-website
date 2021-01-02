@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export const Container = styled.div`
     width: 94%;
     margin-left: auto;
-
+    height: ${props => props.notfound ? '100vh' : 'auto'};
     @media (max-width: 768px) {
         width: 100%;
     }

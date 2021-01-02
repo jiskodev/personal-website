@@ -6,9 +6,9 @@ export const Container = styled.div`
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    @media (max-width: 768px) {
+    @media (max-width: 768px), (max-height: 740px) {
         width: 100%;
         margin: 0;
         height: auto;
@@ -17,13 +17,15 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
     width: 40%;
+    min-width: 500px;
     @media (max-width: 768px) {
         width: 90%;
+        min-width: 200px;
         margin: 0 auto;
     }
 `
 export const TextWrapper = styled.div`
-    width: 80%;
+    width: 70%;
     @media (max-width: 768px) {
         width: 100%;
     }
