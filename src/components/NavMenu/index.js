@@ -1,8 +1,8 @@
 import { useAnimation } from 'framer-motion'
 import React, {useEffect} from 'react'
-import { Container, ItemsWrapper, MenuContainer, MenuLink, MenuLinkR, SocialLink, SocialLinksBox, GitHub, LinkedIn, Mail, ToggleThemeBox } from './navMenuElements'
+import { Container, ItemsWrapper, MenuContainer, MenuLink, SocialLink, SocialLinksBox, ToggleThemeBox } from './navMenuElements'
+import { GitHub, LinkedIn, Mail } from '../SideBar/sideBarElements'
 import ToggleThemeButton from '../ToggleTheme'
-import HoverElement from '../HoverElement'
 
 
 const MenuVariants = {
@@ -29,24 +29,25 @@ function NavMenu({open, toggle, isLightMode, toggleTheme}) {
                 </ItemsWrapper>
                 <MenuContainer>
                 
-                    <MenuLinkR to='/'
-                        onClick={toggle}><HoverElement>Home</HoverElement></MenuLinkR>
+                    <MenuLink to={{
+                                pathname: '/',
+                                hash: '#intro'
+                            }}
+                        onClick={toggle}>Home</MenuLink>
                 
                     
-                    <MenuLink to="about"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
+                    <MenuLink to={{
+                                pathname: '/',
+                                hash: '#about'
+                            }}
                                 onClick={toggle}>About</MenuLink>
-                    <MenuLink to="projects"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
+                    <MenuLink to={{
+                                pathname: '/',
+                                hash: '#projects'
+                            }}
                                 onClick={toggle}>Projects</MenuLink>
-                    <MenuLinkR to='/contact'
-                                onClick={toggle}>Contact</MenuLinkR>
+                    <MenuLink to='/contact'
+                                onClick={toggle}>Contact</MenuLink>
                 </MenuContainer>
                 <ItemsWrapper>
                     <SocialLinksBox>

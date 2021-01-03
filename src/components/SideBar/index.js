@@ -1,13 +1,17 @@
 import React from 'react'
 import Logo from '../Logo'
 import ToggleThemeButton from '../ToggleTheme'
-import { Container, GitHub, LinkedIn, ThemeBox, Mail, MenuBtn, SideBarListItemR, CloseBtn, SideBarBox, SideBarBoxLogo, SideBarLink, SideBarLinkBox, SideBarList, SideBarListItem, SideBarMenu } from './sideBarElements'
+import { Container, GitHub, LinkedIn, ThemeBox, Mail, MenuBtn, SideBarListItemR, CloseBtn, SideBarBox, SideBarBoxLogo, SideBarLink, SideBarLinkBox, SideBarList, SideBarMenu } from './sideBarElements'
 import { useLocation } from 'react-router-dom'
 
 
 function SideBar({ toggle, open, toggleTheme, isLightMode }) {
-    const { pathname } = useLocation()
-    const isAtHome = pathname === '/' ? true : false
+    const location = useLocation()
+
+    const isMatch = ({ match, hash = '' }) => {
+        if (!match) return false;
+        return `${match.url}${hash}` === `${location.pathname}${location.hash}`;
+    };
 
     return (
         <>
@@ -23,47 +27,37 @@ function SideBar({ toggle, open, toggleTheme, isLightMode }) {
                 <SideBarBox>
                     <SideBarList>
                         <SideBarListItemR to='/contact'>Contact</SideBarListItemR>
-                        {isAtHome ?
-                        (<SideBarListItem to="projects"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true">Projects</SideBarListItem>
-                        ) : (<SideBarListItemR to={{
-                            pathname: '/',
-                            hash: '#projects'
-                        }}>Projects</SideBarListItemR>)}
-                        {isAtHome ?
-                        (<SideBarListItem to="about"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true">About</SideBarListItem>
-                        ) : (<SideBarListItemR to={{
-                            pathname: '/',
-                            hash: '#about'
-                        }}>About</SideBarListItemR>)}
-                        {isAtHome
-                        ? (
-                            <SideBarListItem nomargin={1} to="hero"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true">Home</SideBarListItem>
-                        ): <SideBarListItemR nomargin={1} to='/'>Home</SideBarListItemR>
-                        }
+                        <SideBarListItemR exact
+                            isActive={match => isMatch({ match, hash: '#projects' })}
+                            to={{
+                                pathname: '/',
+                                hash: '#projects'
+                            }}>Projects</SideBarListItemR>
+                        <SideBarListItemR exact
+                            isActive={match => isMatch({ match, hash: '#about' })}
+                            to={{
+                                pathname: '/',
+                                hash: '#about'
+                            }}>About</SideBarListItemR>
+                        <SideBarListItemR
+                            isActive={match => isMatch({ match, hash: '#intro' })}
+                            exact nomargin={1}
+                            to={{
+                                pathname: '/',
+                                hash: '#intro'
+                            }}>Home</SideBarListItemR>
                         
                     </SideBarList>
                 </SideBarBox>
                 <SideBarBox>
                     <SideBarLinkBox>
-                        <SideBarLink href="https://www.linkedin.com/in/sergio-andrade-sirghea-694b82144/" target="_blank"><LinkedIn size={24}></LinkedIn></SideBarLink>
+                        <SideBarLink href="https://www.linkedin.com/in/sergio-andrade-sirghea-694b82144/" target="_blank"><LinkedIn size={26}></LinkedIn></SideBarLink>
                     </SideBarLinkBox>
                     <SideBarLinkBox>
-                        <SideBarLink href="https://github.com/jiskodev" target="_blank"><GitHub size={24}></GitHub></SideBarLink>
+                        <SideBarLink href="https://github.com/jiskodev" target="_blank"><GitHub size={25}></GitHub></SideBarLink>
                     </SideBarLinkBox>
                     <SideBarLinkBox>
-                        <SideBarLink href="mailto:ss.andrade@icloud.com"><Mail size={24}></Mail></SideBarLink>
+                        <SideBarLink href="mailto:ss.andrade@icloud.com"><Mail size={25}></Mail></SideBarLink>
                     </SideBarLinkBox>
                 </SideBarBox>
             </Container>

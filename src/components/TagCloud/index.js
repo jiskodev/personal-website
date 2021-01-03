@@ -37,7 +37,7 @@ function TagCloud () {
     return (
     <div>
         <CanvasContainer id="myCanvasContainer">
-        <Canvas width={isMobile ? windowSize.width : '500px'} height={isMobile ? windowSize.width : '500px'} id='myCanvas'>
+        <Canvas width={isMobile ? windowSize.width - 20 : '500px'} height={isMobile ? windowSize.width - 20 : '500px'} id='myCanvas'>
         
         </Canvas>
         

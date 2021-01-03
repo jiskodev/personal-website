@@ -1,10 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
 import { RiMoonFill } from 'react-icons/ri'
-import { Link } from 'react-router-dom'
-import { Link as LinkS } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
 
 export const Container = styled(motion.div)`
     width: 100%;
@@ -34,19 +31,7 @@ export const MenuContainer = styled.div`
     align-items: center;
 `
 
-export const MenuLink = styled(LinkS)`
-    margin: 20px;
-    text-decoration: none;
-    color: ${props => props.theme.colors.navLinksColor};
-    font-size: 22px;
-    font-weight: 500;
-    cursor: pointer;
-    :hover {
-        color: #00e0f9;
-    }
-`
-
-export const MenuLinkR = styled(Link)`
+export const MenuLink = styled(NavLink)`
     margin: 20px;
     text-decoration: none;
     color: ${props => props.theme.colors.navLinksColor};
@@ -66,25 +51,7 @@ export const SocialLink = styled.a`
     margin-right: 10px;
 `
 
-export const LinkedIn = styled(FaLinkedin)`
-    color: ${props => props.theme.colors.menuLinks};
-    :hover {
-        color: #00e0f9;
-    }
-`
 
-export const GitHub = styled(FaGithub)`
-    color: ${props => props.theme.colors.menuLinks};
-    :hover {
-        color: #00e0f9;
-    }
-`
-export const Mail = styled(MdEmail)`
-    color: ${props => props.theme.colors.menuLinks};
-    :hover {
-        color: #00e0f9;
-    }
-`
 
 export const ToggleThemeBox = styled.div`
     position: relative;

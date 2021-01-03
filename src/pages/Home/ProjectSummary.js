@@ -58,7 +58,7 @@ function ProjectBox ({ title, description, imagePath, number, to}) {
     }, [hoverControls, hovering])
 
     return (
-        <ProjectContainer ref={ref}
+        <ProjectContainer id={`project-${number}`} ref={ref}
         animate={viewControls}
         initial="hidden"
         variants={ScrollVariants}>
@@ -98,10 +98,9 @@ function ProjectBox ({ title, description, imagePath, number, to}) {
 
 
 function ProjectSummary({ projects }) {
-
     return (
         <>
-        <Container id='projects'>
+        <Container id='project'>
                 {projects.map(project => (
                     <ProjectBox key={project.id} {...project} />
                     ))}

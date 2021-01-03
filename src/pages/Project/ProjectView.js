@@ -2,7 +2,6 @@ import React from 'react'
 import { BoxLeft, BoxRight, Container, LightLine, LinksBox, ListDescription, ProjectImage, TextDescription, Title, Wrapper, WrapperHead, Icon } from './projectViewElements'
 import OutsideLinkHover from '../../components/Links/OutsideLinkHover'
 
-
 function ProjectView({ title, imagePath, description, items, visitWebsite, viewCode, moreImages }) {
     return (
         <>

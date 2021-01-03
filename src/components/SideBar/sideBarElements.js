@@ -1,11 +1,9 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
+import { IoLogoGithub, IoMdMail, IoLogoLinkedin } from 'react-icons/io'
 import { HiMenuAlt1 } from 'react-icons/hi'
 import { MdClose } from 'react-icons/md'
-import { Link as LinkS } from 'react-scroll'
 
 export const Container = styled(motion.div)`
     width: 6%;
@@ -80,22 +78,8 @@ export const SideBarList = styled.div`
     transform: rotate(270deg);
 `
 
-export const SideBarListItem = styled(LinkS)`
-    margin-right: ${props => props.nomargin === 1 ? '0px' : '50px'};
-    text-decoration: none;
-    font-weight: 500;
-    cursor: pointer;
-    color: ${props => props.theme.colors.menuLinks};
-    :hover {
-        color: ${props => props.theme.colors.linkBtnColor};
-    }
 
-    &.active {
-        color: ${props => props.theme.colors.linkBtnColor};
-    }
-`
-
-export const SideBarListItemR = styled(Link)`
+export const SideBarListItemR = styled(NavLink)`
     margin-right: ${props => props.nomargin ? '0px' : '50px'};
     text-decoration: none;
     font-weight: 500;
@@ -110,6 +94,7 @@ export const SideBarListItemR = styled(Link)`
     }
 `
 
+
 export const SideBarLinkBox = styled.div`
     margin-bottom: 20px;
 
@@ -119,20 +104,20 @@ export const SideBarLink = styled.a`
 
 `
 
-export const LinkedIn = styled(FaLinkedin)`
+export const LinkedIn = styled(IoLogoLinkedin)`
     color: ${props => props.theme.colors.menuLinks};
     :hover {
         color: ${props => props.theme.colors.linkBtnColor};
     }
 `
 
-export const GitHub = styled(FaGithub)`
+export const GitHub = styled(IoLogoGithub)`
     color: ${props => props.theme.colors.menuLinks};
     :hover {
         color: ${props => props.theme.colors.linkBtnColor};
     }
 `
-export const Mail = styled(MdEmail)`
+export const Mail = styled(IoMdMail)`
     color: ${props => props.theme.colors.menuLinks};
     :hover {
         color: ${props => props.theme.colors.linkBtnColor};
