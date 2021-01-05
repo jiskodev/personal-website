@@ -88,7 +88,7 @@ function ProjectBox ({ title, description, imagePath, number, to}) {
                 >
                     <ProjectTitle>{title}</ProjectTitle>
                     <ProjectDescription>{description}</ProjectDescription>
-                    <ProjectLink hovering={hovering} to={`/projects/${to}`}>View Project</ProjectLink>
+                    <ProjectLink hovering={hovering ? 1 : 2} to={`/projects/${to}`}>View Project</ProjectLink>
                 </InfoWrapper>
             </ProjectWrapper>
         </ProjectContainer>

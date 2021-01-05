@@ -106,7 +106,7 @@ export const ProjectDescription = styled.p`
 `
 export const ProjectLink = styled(Link)`
     z-index: 10;
-    background-color: ${props => props.hovering ? props.theme.colors.textColor : props.theme.colors.linkBtnColor};
+    background-color: ${props => props.hovering === 1 ? props.theme.colors.textColor : props.theme.colors.linkBtnColor};
     padding: 16px 32px;
     text-decoration: none;
     font-weight: 500;

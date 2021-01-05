@@ -19,21 +19,21 @@ function ProjectView({ title, imagePath, description, items, visitWebsite, viewC
                         <BoxRight>
                         <LightLine></LightLine>
                                 {items.map(item => (
-                                    <>
+                                    <div key={item}>
                                     <ListDescription>
                                 {item}
                             </ListDescription>
                             <LightLine></LightLine>
-                            </>
+                            </div>
                                 ))}
                         </BoxRight>
                     </WrapperHead>
                     <ProjectImage src={imagePath}></ProjectImage>
                     {moreImages ? moreImages.map(image => (
-                        <>
+                        <div key={image.title}>
                         <TextDescription>{image.title}</TextDescription>
                         <ProjectImage src={image.imagePath}></ProjectImage>
-                        </>
+                        </div>
                     )) : null}
                 </Wrapper>
             </Container>
