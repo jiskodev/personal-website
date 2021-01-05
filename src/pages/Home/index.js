@@ -6,6 +6,7 @@ import { Container } from '../../components/backgroundContainer'
 import ContactSection from './ContactSection'
 import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import ScrollToTopOnMount from '../../components/utils/ScrollToTopOnMount'
 
 const pageVariants = {
     initial: {
@@ -15,10 +16,13 @@ const pageVariants = {
     in: {
         opacity: 1,
         scale: 1
+    },
+    out: {
+        opacity: 0
     }
     }
 
-    const pageTransition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
+    const pageTransition = { duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96] };
 
 
 function Home({ projects }) {
@@ -39,6 +43,9 @@ function Home({ projects }) {
             const top = selectedRef.current.offsetTop
             window.scrollTo({top, left: 0, behavior})
         }
+        else if (!hash) {
+            window.scrollTo(0, 0)
+        }
         
         
     }, [location])
@@ -49,7 +56,9 @@ function Home({ projects }) {
         animate="in"
         variants={pageVariants}
         transition={pageTransition}
+        exit='out'
         >
+        
             <Container>
                 <div id='intro' ref={introRef}>
                 <Intro />

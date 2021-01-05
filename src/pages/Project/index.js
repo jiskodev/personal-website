@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ProjectView from './ProjectView'
 import UndefinedProject from './UndefinedProject'
+import ScrollToTopOnMount from '../../components/utils/ScrollToTopOnMount'
 
 const pageVariants = {
     initial: {
@@ -19,13 +20,17 @@ const pageVariants = {
     },
     }
 
-    const pageTransition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
+    const pageTransition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 function Project({ projects }) {
     const { handle } = useParams()
     const currentProject = projects.find(item => item.to === handle)
 
     const projectExists = currentProject !== undefined
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <motion.div
@@ -35,6 +40,8 @@ function Project({ projects }) {
             variants={pageVariants}
             transition={pageTransition}
         >
+        
+            
             
             {projectExists ? <ProjectView {...currentProject} /> : <UndefinedProject handle={handle} />}
             

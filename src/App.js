@@ -1,4 +1,4 @@
-import React, {useState, Suspense, lazy} from 'react'
+import React, {useState} from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import './App.css';
@@ -11,10 +11,10 @@ import darkTheme from './themes/dark'
 import { Container } from './components/backgroundContainer'
 import ScrollToTop from './components/utils/ScrollToTop'
 import NoMatchPage from './pages/404';
+import Home from './pages/Home'
+import Project from './pages/Project'
+import ContactForm from './components/ContactForm'
 
-const Home = lazy(() => import('./pages/Home'))
-const Project = lazy(() => import('./pages/Project'))
-const Contact = lazy(() => import('./components/pages/Contact'))
 
 
 function App() {
@@ -33,27 +33,24 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={isLightMode ? lightTheme : darkTheme}>
-      <ScrollToTop />
         <Container>
         <SideBar toggle={toggle} open={open} toggleTheme={toggleTheme} isLightMode={isLightMode} />
         <NavMenu toggle={toggle} open={open} toggleTheme={toggleTheme} isLightMode={isLightMode}></NavMenu>
-          <AnimatePresence>
-        <Suspense fallback={<></>}>
+          <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.pathname}>
               <Route exact path='/'>
                 <Home projects={Projects} />
               </Route>
               <Route exact path='/contact'>
-                <Contact />
+                <ContactForm />
               </Route>
-              <Route path='/projects/:handle'>
+              <Route exact path='/projects/:handle'>
                 <Project toggle={toggle} open={open} projects={Projects} />
               </Route>
               <Route path='*'>
                 <NoMatchPage />
               </Route>
             </Switch>
-        </Suspense>
           </AnimatePresence>
         </Container>
       </ThemeProvider>

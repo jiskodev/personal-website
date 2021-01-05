@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './contactForm.css'
 import TextScramble from '@twistezo/react-text-scramble'
-
+import { motion } from 'framer-motion'
 const texts = [
     "Say hello"
 ]
@@ -31,7 +31,7 @@ function ContactForm() {
 
     return (
         <>
-        <div class="contact_form">
+        <motion.div class="contact_form" exit={{opacity: 0}}>
             <div class="sayHello"><TextScramble texts={texts}/></div>
             <div class="blue-line"></div>
                 <form class="contactForm" onSubmit={handleSubmit}>
@@ -46,7 +46,7 @@ function ContactForm() {
                     <button type="submit"><span class="button-send">Send Message</span></button>
                 </form>
             
-        </div>
+        </motion.div>
         </>
     )
 }
