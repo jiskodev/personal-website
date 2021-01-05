@@ -6,7 +6,6 @@ import { Container } from '../../components/backgroundContainer'
 import ContactSection from './ContactSection'
 import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import ScrollToTopOnMount from '../../components/utils/ScrollToTopOnMount'
 
 const pageVariants = {
     initial: {

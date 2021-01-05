@@ -9,7 +9,6 @@ import { ThemeProvider } from 'styled-components'
 import lightTheme from './themes/light'
 import darkTheme from './themes/dark'
 import { Container } from './components/backgroundContainer'
-import ScrollToTop from './components/utils/ScrollToTop'
 import NoMatchPage from './pages/404';
 import Home from './pages/Home'
 import Project from './pages/Project'

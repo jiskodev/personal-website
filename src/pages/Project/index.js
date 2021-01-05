@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ProjectView from './ProjectView'
 import UndefinedProject from './UndefinedProject'
-import ScrollToTopOnMount from '../../components/utils/ScrollToTopOnMount'
 
 const pageVariants = {
     initial: {
