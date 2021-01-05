@@ -5,6 +5,20 @@ import ProjectSummary from './ProjectSummary'
 import { Container } from '../../components/backgroundContainer'
 import ContactSection from './ContactSection'
 import { useLocation } from 'react-router-dom'
+import { motion } from 'framer-motion'
+
+const pageVariants = {
+    initial: {
+        opacity: 0,
+        scale: 0.9
+    },
+    in: {
+        opacity: 1,
+        scale: 1
+    }
+    }
+
+    const pageTransition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
 
 
 function Home({ projects }) {
@@ -30,7 +44,12 @@ function Home({ projects }) {
     }, [location])
 
     return (
-        <>
+        <motion.div
+        initial="initial"
+        animate="in"
+        variants={pageVariants}
+        transition={pageTransition}
+        >
             <Container>
                 <div id='intro' ref={introRef}>
                 <Intro />
@@ -45,7 +64,7 @@ function Home({ projects }) {
                 <ContactSection />
                 </div>
             </Container>
-        </>
+        </motion.div>
     )
 }
 
